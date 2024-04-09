@@ -66,7 +66,11 @@ ALTER TABLE Projeto DROP PRcidade;
 
 ALTER TABLE Projeto DROP Icodigo;
 
-ALTER TABLE Projeto ADD FOREIGN KEY(Ccodigo) REFERENCES Cidade;
+ALTER TABLE Projeto ADD Ccodigo VARCHAR(30);
+
+ALTER TABLE Projeto ADD CONSTRAINT FOREIGN KEY(Ccodigo) REFERENCES Cidade;
+
+DROP TABLE Instituicao;
 
 
 
