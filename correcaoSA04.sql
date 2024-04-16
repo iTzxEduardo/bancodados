@@ -198,3 +198,12 @@ SELECT p.*
 FROM Produtos p
 LEFT JOIN Pedidos_Produtos pp ON p.ID = pp.ID_Produto
 WHERE pp.ID_Produto IS NULL;
+
+
+CREATE TABLE IF NOT EXISTS Pedidos(
+    ID SERIAL,
+    ID_Clientes INT ,
+    Data_Pedidos DATE NOT NULL,
+    PRIMARY KEY (ID),
+    FOREIGN kEY (ID_Clientes) REFERENCES Clientes (ID)
+);
