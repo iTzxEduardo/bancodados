@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS Pedidos(
     FOREIGN kEY (ID_Clientes) REFERENCES Clientes (ID)
 );
 
-
+ 
 CREATE TABLE IF NOT EXISTS Produtos(
     ID SERIAL,
     Nome VARCHAR (50) NOT NULL,
@@ -171,9 +171,7 @@ DELETE FROM Pedidos WHERE ID_Clientes = (SELECT ID FROM Clientes WHERE Nome = 'J
 DELETE FROM Clientes WHERE Nome = 'Jo';
 
 
-DELETE FROM Pedidos_Produtos WHERE ID_Produto = (SELECT ID FROM Produtos WHERE Nome = 'Camisa');
 
-DELETE FROM Produtos WHERE Nome = 'Camisa';
 
 
 
